@@ -1,0 +1,19 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import Main from "./Main.astro";
+
+type Props = MarkdownLayoutProps<{
+    title: string;
+    subtitle: string;
+    poster: string
+}>
+
+// const {title,subtitle,poster} = Astro.props.frontmatter;
+---
+
+<Main title="Niharika Dayama | Blog">
+    <figure>
+        <img width="100%" height="480px"/>
+    </figure>
+    <slot/>
+</Main>
