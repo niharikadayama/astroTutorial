@@ -1,0 +1,31 @@
+---
+import Main from "../layouts/Main.astro"
+const bgImage = "https://images.pexels.com/photos/5717051/pexels-photo-5717051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+---
+
+<Main title="Niharika Dayama">
+	<div class="mainContainer">
+		<img class="profilePicture" width="100" height="100" alt="scenery" src={bgImage}/>
+		<div class="profileInfo">
+			<h1>Niharika Dayama</h1>
+			<h2>Managing Director</h2>
+			<p>Leading and overseeing the overall operations and business strategy of an organization</p>
+		</div>
+	</div>
+</Main>	
+
+<style>
+  .mainContainer{
+   display: flex;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   padding: 1rem 0 3rem 0;
+  }
+  .profilePicture{
+    border-radius: 50%;
+    align-self: center;
+  }
+  .profileInfo{
+   margin-left: 12px;
+  }
+</style>
