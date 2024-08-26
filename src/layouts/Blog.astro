@@ -8,12 +8,34 @@ type Props = MarkdownLayoutProps<{
     poster: string
 }>
 
-// const {title,subtitle,poster} = Astro.props.frontmatter;
+const {title,subtitle,poster} = Astro.props.frontmatter;
 ---
 
 <Main title="Niharika Dayama | Blog">
-    <figure>
-        <img width="100%" height="480px"/>
+    <figure class="figure">
+        <img src={poster} alt="poster image" width="100%" height="480px" class="figureImage"/>
+        <figcaption class="figureCaption">Poster image for {title.toLowerCase()}</figcaption>
     </figure>
+    <h1>{title}</h1>
+    <h2>{subtitle}</h2>
     <slot/>
 </Main>
+
+<style>
+    h1 + h2{
+        margin-bottom: 3rem;
+    }
+
+    .figure{
+        margin: 0;
+    }
+
+    .figureImage{
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .figureCaption{
+        font-size: 0.9rem;
+    }
+</style>
